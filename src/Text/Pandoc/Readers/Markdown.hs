@@ -1611,7 +1611,7 @@ one c prefix' = do
     <|> return (return (B.str $ T.singleton c) <> (prefix' <> contents))
 
 strongOrEmph :: PandocMonad m => MarkdownParser m (F Inlines)
-strongOrEmph =  enclosure '*' <|> enclosure '_'
+strongOrEmph =  enclosure 'p' <|> enclosure '_'
 
 -- | Parses a list of inlines between start and end delimiters.
 inlinesBetween :: PandocMonad m
